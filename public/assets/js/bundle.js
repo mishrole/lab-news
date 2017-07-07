@@ -54,9 +54,9 @@ const Frontpage = (update) => {
 	const today1Img = $('<div class="image news-1"></div>');
 	const today2Img = $('<div class="image news-2"></div>');
 	const today3Img = $('<div class="image news-3"></div>');
-	const today1Text = $('<div class="col s12 l7"><p sub-text">'+state.news[1].title+'</p></div>');
-	const today2Text = $('<div class="col s12 l8"><p sub-text">'+state.news[2].title+'</p></div>');
-	const today3Text = $('<div class="col s12 l9"><p sub-text">'+state.news[3].title+'</p></div>');
+	const today1Text = $('<div class="col s12 small-container"><p class="col s12 l7 small-title">'+state.news[1].title+'</p></div>');
+	const today2Text = $('<div class="col s12 small-container"><p class="col s12 l7 small-title">'+state.news[2].title+'</p></div>');
+	const today3Text = $('<div class="col s12 small-container"><p class="col s12 l7 small-title">'+state.news[3].title+'</p></div>');
 
 	textContainer.append(titlePrincipal, briefPrincipal);
 	imagePrincipal.append(textContainer);
