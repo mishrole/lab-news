@@ -1,13 +1,57 @@
 @import 'variables';
 @import 'grid';
+@import 'showhide';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+img.responsive-img,
+video.responsive-video {
+  max-width: 100%;
+  height: auto;
+}
 
 /* Class Colors */
 
-.lab-yellow{
+.lab-yellow {
   color: $primary-color;
 }
 
-.lab-grey{
+.lab-grey {
   color: $secondary-color;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo-main {
+  margin: 20px 0; 
+}
+
+.menu {
+  padding: 10px;
+  background-color: $primary-color;
+}
+
+.menu > ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}

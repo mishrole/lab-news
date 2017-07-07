@@ -28,7 +28,7 @@ var sources = {
   html: config.source + paths.html,
   img: config.source + paths.assets + paths.img,
   js: config.source + paths.assets +  paths.js,
-  //js: paths.assets + paths.js,
+  js: paths.assets + paths.js,
   sass: config.source + paths.assets + paths.sass,
   rootSass: config.source + paths.assets + paths.mainSass,
   rootJS: config.source + paths.assets + paths.mainJS
@@ -56,7 +56,6 @@ gulp.task('sass', ()=> {
 gulp.task('js', ()=> {
   gulp.src(sources.rootJS)
     .pipe(concat('bundle.js'))
-    //.pipe(uglify())
     .pipe(gulp.dest(config.dist + paths.assets + "js"));
 });
 

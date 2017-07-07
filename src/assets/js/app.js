@@ -10,6 +10,7 @@ const render = (root) => {
 	};
 
 	wrapper.append(Header(update));
+	wrapper.append(Frontpage(update));
 	root.append(wrapper);
 
 };
@@ -22,9 +23,11 @@ $( _ => {
 
 	$.get('api/news', function(data){
 		state.news = data
-	});
 
+		
 	const root = $('.root');
 	render(root)
+
+	});
 
 });

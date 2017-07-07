@@ -10,6 +10,7 @@ const render = (root) => {
 	};
 
 	wrapper.append(Header(update));
+	wrapper.append(Frontpage(update));
 	root.append(wrapper);
 
 };
@@ -22,19 +23,73 @@ $( _ => {
 
 	$.get('api/news', function(data){
 		state.news = data
-	});
 
+		
 	const root = $('.root');
 	render(root)
+
+	});
 
 });
 
 'use strict';
 
-const Header = (update) => {
-	const header = $('<header></header>');
-	const h1 = $('<h1>Texto de prueba</h1>')
+const Frontpage = (update) => {
 
-	header.append(h1);
+	const principalContainer = $('<div class="container"></div>');
+	const principalRow = $('<div class="row"></div>');
+	const principal = $('<div class="principal col s12"></div>');
+	const imagePrincipal = $('<img src="assets/img/news/news-0.png" alt="news-0" class="responsive-img">');
+	const textContainer = $('<div class="container"></div>');
+	const titlePrincipal = $('<div class="title"><h1>'+state.news[0].title+'</h1></div>');
+	const briefPrincipal = $('<div class="subtitle"><p>'+state.news[0].brief+'</p></div>');
+
+	textContainer.append(titlePrincipal, briefPrincipal);
+	principal.append(imagePrincipal, textContainer);
+	principalRow.append(principal);
+	principalContainer.append(principalRow);
+
+	return principalContainer;
+}
+'use strict';
+
+const Header = (update) => {
+	const top = $('<div class="top-bar container"></div>')
+	const column = $('<div class="col s12"></div>');
+	const options = $('<div class="options col s6"></div>');
+	const sections = $('<a href="" class="btn__sections lab-grey"><img src="assets/img/menu.png" alt="menu"><span>Sections</span></a>');
+	const search = $('<a href="" class="btn__search lab-grey"><img src="assets/img/search.png" alt="search"><span>Social</span></a>');
+	const social = $('<div class="social col s6 right"></div>');
+	const facebook = $('<img src="assets/img/fb.png" alt="facebook logo">');
+	const twitter = $('<img src="assets/img/tw.png" alt="twitter logo">');
+	const linkedin = $('<img src="assets/img/in.png" alt="linkedin logo">');
+	const row = $('<div class="row"></div>');
+	const header = $('<header></header>');
+	const main = $('<div class="logo-main text-center"></div>');
+	const logo = $('<img src="assets/img/logoicon.png" alt="logo">');
+	const date = $('<p>Lunes, Junio 12 de 2017 | <img src="assets/img/cloud.png" alt="cloud"> 22°</p>');
+
+	const menu = $('<div class="menu container"></div>');
+	const ul = $('<ul></ul>');
+	const ultimo = $('<li><a href="">Lo último</a></li>');
+	const opinion = $('<li><a href="">Opinión</a></li>');
+	const cultura = $('<li><a href="">Cultura</a></li>');
+	const peru = $('<li><a href="">Perú</a></li>');
+	const tecnologia = $('<li><a href="">Tecnología</a></li>');
+	const mundo = $('<li><a href="">Mundo</a></li>');
+	const economia = $('<li><a href="">Economía</a></li>');
+	const lifestyle = $('<li><a href="">Lifestyle</a></li>');
+	const deporte = $('<li><a href="">Deporte</a></li>');
+
+	social.append(facebook,twitter,linkedin);
+	options.append(sections,search);
+	column.append(options,social);
+	row.append(column);
+	top.append(row);
+	main.append(logo,date);
+	ul.append(ultimo,opinion,cultura,peru,tecnologia,mundo,economia,lifestyle,deporte);
+	menu.append(ul);
+	header.append(top,main,menu);
+
 	return header;
 };
