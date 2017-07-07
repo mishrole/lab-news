@@ -15,13 +15,13 @@ const render = (root) => {
 };
 
 const state = {
-	data: null
+	news: null
 };
 
 $( _ => {
 
 	$.get('api/news', function(data){
-		state.data = data
+		state.news = data
 	});
 
 	const root = $('.root');
