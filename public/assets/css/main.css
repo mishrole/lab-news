@@ -953,3 +953,150 @@ a {
   list-style: none;
   justify-content: space-around;
 }
+
+.news-0 {
+  background-image: url(../img/news/news-0.png);
+}
+
+.news-1 {
+  background-image: url(../img/news/news-1.png);
+}
+
+.news-2 {
+  background-image: url(../img/news/news-2.png);
+}
+
+.news-3 {
+  background-image: url(../img/news/news-3.png);
+}
+
+.news-4 {
+  background-image: url(../img/news/news-4.png);
+}
+
+.news-5 {
+  background-image: url(../img/news/news-5.png);
+}
+
+.news-6 {
+  background-image: url(../img/news/news-6.png);
+}
+
+.news-7 {
+  background-image: url(../img/news/news-7.png);
+}
+
+.news-8 {
+  background-image: url(../img/news/news-8.png);
+}
+
+.news-9 {
+  background-image: url(../img/news/news-9.png);
+}
+
+.news-10 {
+  background-image: url(../img/news/news-10.png);
+}
+
+.news-11 {
+  background-image: url(../img/news/news-11.png);
+}
+
+.news-12 {
+  background-image: url(../img/news/news-12.png);
+}
+
+.news-13 {
+  background-image: url(../img/news/news-13.png);
+}
+
+.news-14 {
+  background-image: url(../img/news/news-14.png);
+}
+
+.news-15 {
+  background-image: url(../img/news/news-15.png);
+}
+
+.news-16 {
+  background-image: url(../img/news/news-16.png);
+}
+
+.news-17 {
+  background-image: url(../img/news/news-17.png);
+}
+
+.news-18 {
+  background-image: url(../img/news/news-18.png);
+}
+
+.news-19 {
+  background-image: url(../img/news/news-19.png);
+}
+
+.news-20 {
+  background-image: url(../img/news/news-20.png);
+}
+
+.news-21 {
+  background-image: url(../img/news/news-21.png);
+}
+
+.news-22 {
+  background-image: url(../img/news/news-22.png);
+}
+
+.news-23 {
+  background-image: url(../img/news/news-23.png);
+}
+
+.news-24 {
+  background-image: url(../img/news/news-24.png);
+}
+
+.news-25 {
+  background-image: url(../img/news/news-25.png);
+}
+
+.news-26 {
+  background-image: url(../img/news/news-26.png);
+}
+
+.news-27 {
+  background-image: url(../img/news/news-27.png);
+}
+
+.news-28 {
+  background-image: url(../img/news/news-28.png);
+}
+
+.news-29 {
+  background-image: url(../img/news/news-29.png);
+}
+
+.news-30 {
+  background-image: url(../img/news/news-30.png);
+}
+
+.news-31 {
+  background-image: url(../img/news/news-31.png);
+}
+
+.image {
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+  color: white;
+  position: relative;
+}
+
+.text-container {
+  position: absolute;
+  bottom: 2vw;
+  left: 2vw;
+}
+
+.title {
+  font-size: calc(100% + 1.5vw);
+  font-weight: bolder;
+}

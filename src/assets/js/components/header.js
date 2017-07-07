@@ -16,7 +16,7 @@ const Header = (update) => {
 	const logo = $('<img src="assets/img/logoicon.png" alt="logo">');
 	const date = $('<p>Lunes, Junio 12 de 2017 | <img src="assets/img/cloud.png" alt="cloud"> 22°</p>');
 
-	const menu = $('<div class="menu container"></div>');
+	const menu = $('<div class="menu container hide-on-small-only"></div>');
 	const ul = $('<ul></ul>');
 	const ultimo = $('<li><a href="">Lo último</a></li>');
 	const opinion = $('<li><a href="">Opinión</a></li>');

@@ -55,3 +55,29 @@ a {
   list-style: none;
   justify-content: space-around;
 }
+
+@for $i from 0 through 31{
+  .news-#{$i}{
+    background-image: url(../img/news/news-#{$i}.png);
+  }
+}
+
+.image{
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+  color: white;
+  position: relative;
+}
+
+.text-container{
+  position: absolute;
+  bottom: 2vw;
+  left: 2vw;
+}
+
+.title{
+  font-size: calc(100% + 1.5vw);
+  font-weight: bolder;
+}
+
