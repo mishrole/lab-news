@@ -934,6 +934,21 @@ video.responsive-video {
   text-align: right;
 }
 
+@media only screen and (min-width: 993px) {
+  p.col.s12.l7.small-title {
+    margin: 0;
+  }
+  .center-padding {
+    padding: 0.82rem 0 !important;
+  }
+  .control-padding-left {
+    padding: 0 0.75rem 0 0 !important;
+  }
+  .control-padding-right {
+    padding: 0 0 0 0.75rem !important;
+  }
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -1111,11 +1126,11 @@ a {
 }
 
 .center-large-container {
-  height: 17.9vh;
+  height: 120px;
 }
 
 .small-container {
-  height: 15vh;
+  height: 100px;
 }
 
 .small-container,
@@ -1124,21 +1139,4 @@ a {
   color: white;
   display: flex;
   align-items: center;
-}
-
-p.col.s12.l7.small-title {
-  margin: 0;
-}
-
-.no-padding {
-  padding: 0 !important;
-}
-
-.principal-mundo {
-  margin-left: 0.7rem;
-  margin-right: 0.7rem;
-}
-
-.center-large {
-  padding: 17px 0.75rem 5px !important;
 }

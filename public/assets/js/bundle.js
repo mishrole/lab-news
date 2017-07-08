@@ -12,6 +12,8 @@ const render = (root) => {
 	wrapper.append(Header(update));
 	wrapper.append(Frontpage(update));
 	wrapper.append(Mundosection(update));
+	wrapper.append(Tecnologiasection(update));
+	wrapper.append(Educacionsection(update));
 	root.append(wrapper);
 
 };
@@ -33,6 +35,63 @@ $( _ => {
 
 });
 
+'use strict';
+
+const Educacionsection = (update) => {
+
+	const section = $('<section id="educacion"></section>');
+	const title = $('<p>Educación</p>');
+
+	const container = $('<div class="container"></div>');
+	const principalRow = $('<div class="row"></div>');
+	const principal = $('<div></div>');
+
+	const left = $('<div class="col s12 l6"></div>');
+
+	const left1 = $('<div class="col s12 l6 control-padding-left"></div>');
+	const left1Text = $('<div class="small-container"><p class="col s12">'+state.news[20].title+'</p></div>');
+	const left1Image = $('<div class="small-image news-20"></div>');
+
+	const left2 = $('<div class="col s12 l6 control-padding-right"></div>');
+	const left2Text = $('<div class="small-container"><p class="col s12">'+state.news[21].title+'</p></div>');
+	const left2Image = $('<div class="small-image news-21"></div>');
+
+	const left3 = $('<div class="col s12 l12 center-padding"></div>');
+	const left3Text = $('<div class="center-large-container"><p class="col s12">'+state.news[22].title+'</p></div>');
+	const left3Image = $('<div class="small-image news-22 col l6 s6"></div>');
+
+	const right = $('<div class="col s12 l6"></div>');
+
+	const right1 = $('<div class="col s12 l6 control-padding-left"></div>');
+	const right1Text = $('<div class="small-container"><p class="col s12">'+state.news[23].title+'</p></div>');
+	const right1Image = $('<div class="small-image news-23"></div>');
+
+	const right2 = $('<div class="col s12 l6 control-padding-right"></div>');
+	const right2Text = $('<div class="small-container"><p class="col s12">'+state.news[24].title+'</p></div>');
+	const right2Image = $('<div class="small-image news-24"></div>');
+
+	const right3 = $('<div class="col s12 l12 center-padding"></div>');
+	const right3Text = $('<div class="center-large-container"><p class="col s12">'+state.news[23].title+'</p></div>');
+	const right3Image = $('<div class="small-image news-23 col l6 s6"></div>');
+
+	left1.append(left1Image, left1Text);
+	left2.append(left2Image, left2Text);
+	left3.append(left3Image, left3Text);
+
+	right1.append(right1Image, right1Text);
+	right2.append(right2Image, right2Text);
+	right3.append(right3Image, right3Text);
+
+	left.append(left1,left2,left3);
+	right.append(right1,right2,right3);
+	principal.append(left,right);
+	principalRow.append(principal);
+	container.append(title,principalRow);
+	section.append(container);
+
+	return section
+
+}
 'use strict';
 
 const Frontpage = (update) => {
@@ -121,33 +180,36 @@ const Header = (update) => {
 
 const Mundosection = (update) => {
 
+	const section = $('<section id="mundo"></section>');
+	const title = $('<p>Mundo</p>');
+
 	const container = $('<div class="container"></div>');
 	const principalRow = $('<div class="row"></div>');
-	const principal = $('<div class="principal-mundo"></div>');
+	const principal = $('<div></div>');
 
-	const left = $('<div class="col s12 l3 no-padding"></div>');
+	const left = $('<div class="col s12 l3"></div>');
 	const textLeft = $('<div class="small-container"><p class="col s12">'+state.news[4].title+'</p></div>');
 	const imageLeft = $('<div class="image news-4"></div>');
 
-	const center = $('<div class="col l6 s12"></div>');
+	const center = $('<div class="col l6"></div>');
 
-	const center1 = $('<div class="col l6 s12"></div>');
+	const center1 = $('<div class="col l6 s12 control-padding-left"></div>');
 	const textCenter1 = $('<div class="small-container"><p class="col s12">'+state.news[5].title+'</p></div>');
 	const imageCenter1 = $('<div class="small-image news-5"></div>');
 
-	const center2 = $('<div class="col l6 s12"></div>');
+	const center2 = $('<div class="col l6 s12 control-padding-right"></div>');
 	const textCenter2 = $('<div class="small-container"><p class="col s12">'+state.news[6].title+'</p></div>');
 	const imageCenter2 = $('<div class="small-image news-6"></div>');
 
-	const right = $('<div class="col s12 l3 no-padding"></div>');
+	const right = $('<div class="col s12 l3"></div>');
 	const textRight = $('<div class="small-container"><p class="col s12">'+state.news[7].title+'</p></div>');
 	const imageRight = $('<div class="image news-7"></div>');
 
-	const center3 = $('<div class="col s12 l12 center-large"></div>');
+	const center3 = $('<div class="col s12 l12 center-padding"></div>');
 	const textCenter3 = $('<div class="col l6 s12 center-large-container"><p class="col s12">'+state.news[8].title+'</p></div>');
 	const imageCenter3 = $('<div class="small-image col l6 s12 news-8"></div>');
 
-	const center4 = $('<div class="col s12 l12 center-large"></div>');
+	const center4 = $('<div class="col s12 l12 center-padding"></div>');
 	const textCenter4 = $('<div class="col l6 s12 center-large-container"><p class="col s12">'+state.news[9].title+'</p></div>');
 	const imageCenter4 = $('<div class="small-image news-9 col s12 l6"></div>');
 
@@ -188,7 +250,55 @@ const Mundosection = (update) => {
 	center.append(center1,center2,center3,center4);
 	principal.append(left,center,right);
 	principalRow.append(principal);
-	container.append(principalRow, secondaryRow);
+	container.append(title, principalRow, secondaryRow);
+	section.append(container)
 
-	return container;
+	return section;
+}
+'use strict';
+
+const Tecnologiasection = (update) => {
+
+	const section = $('<section id="tecnologia"></section>');
+	const title = $('<p>Tecnología</p>');
+
+	const container = $('<div class="container"></div>');
+	const principalRow = $('<div class="row"></div>');
+	const principal = $('<div></div>');
+
+	const left = $('<div class="col s12 l6"></div>');
+	const textLeft = $('<div class="small-container"><p class="col s12">'+state.news[14].title+'</p></div>');
+	const imageLeft = $('<div class="image news-14"></div>');
+
+	const right = $('<div class="col s12 l6"></div>');
+
+	const right1 = $('<div class="col s12 l6 control-padding-left"></div>');
+	const right1Text = $('<div class="small-container"><p class="col s12">'+state.news[15].title+'</p></div>');
+	const right1Image = $('<div class="small-image news-15"></div>');
+
+	const right2 = $('<div class="col s12 l6 control-padding-right"></div>');
+	const right2Text = $('<div class="small-container"><p class="col s12">'+state.news[16].title+'</p></div>');
+	const right2Image = $('<div class="small-image news-16"></div>');
+
+	const right3 = $('<div class="col s12 l12 center-padding"></div>');
+	const right3Text = $('<div class="center-large-container"><p class="col s12">'+state.news[17].title+'</p></div>');
+	const right3Image = $('<div class="small-image news-17 col l6 s6"></div>');
+
+	const right4 = $('<div class="col s12 l12 center-padding"></div>');
+	const right4Text = $('<div class="center-large-container"><p class="col s12">'+state.news[18].title+'</p></div>');
+	const right4Image = $('<div class="small-image news-18 col l6 s6"></div>');
+
+	right1.append(right1Image, right1Text);
+	right2.append(right2Image, right2Text);
+	right3.append(right3Image, right3Text);
+	right4.append(right4Image, right4Text);
+
+	left.append(imageLeft,textLeft);
+	right.append(right1,right2,right3,right4);
+	principal.append(left,right);
+	principalRow.append(principal);
+	container.append(principalRow);
+	section.append(container);
+
+	return section
 }
