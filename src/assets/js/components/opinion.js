@@ -2,7 +2,7 @@
 
 const Opinionsection = (update) => {
 	
-	const section = $('<section id="educacion"></section>');
+	const section = $('<section id="opinion"></section>');
 	const title = $('<p>Opinión</p>');
 
 	const container = $('<div class="container"></div>');

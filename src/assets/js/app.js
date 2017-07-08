@@ -15,6 +15,8 @@ const render = (root) => {
 	wrapper.append(Tecnologiasection(update));
 	wrapper.append(Educacionsection(update));
 	wrapper.append(Opinionsection(update));
+	wrapper.append(Carrousel(update));
+	wrapper.append(Footer(update));
 	root.append(wrapper);
 
 };
