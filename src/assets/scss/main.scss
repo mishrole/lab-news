@@ -62,12 +62,22 @@ a {
   }
 }
 
-.image{
+.image,
+.small-image {
   background-position: center;
   background-size: cover;
-  min-height: 400px;
   color: white;
   position: relative;
+}
+
+.image {
+  min-height: 400px !important;
+}
+
+.small-image {
+  min-height: 120px !important;
+  padding: 0;
+
 }
 
 .text-container{
@@ -81,9 +91,17 @@ a {
   font-weight: bolder;
 }
 
+.center-large-container{
+  height: 17.9vh;
+}
+
 .small-container{
-  background-color: $secondary-color;
   height: 15vh;
+}
+
+.small-container,
+.center-large-container{
+  background-color: $secondary-color;
   color: white;
   display: flex;
   align-items: center;
@@ -91,4 +109,17 @@ a {
 
 p.col.s12.l7.small-title{
   margin: 0;
+}
+
+.no-padding{
+  padding: 0 !important;
+}
+
+.principal-mundo{
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+}
+
+.center-large{
+  padding: 17px 0.75rem 5px !important;
 }

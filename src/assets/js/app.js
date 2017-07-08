@@ -11,6 +11,7 @@ const render = (root) => {
 
 	wrapper.append(Header(update));
 	wrapper.append(Frontpage(update));
+	wrapper.append(Mundosection(update));
 	root.append(wrapper);
 
 };
