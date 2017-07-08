@@ -902,16 +902,14 @@
 }
 
 .carrousel-workspace {
-  min-height: 50vh;
+  min-height: 20vh;
   display: flex;
 }
 
 .carrousel-container {
   margin: auto;
-  max-width: 900px;
-  width: 85%;
+  max-width: 200px;
   position: relative;
-  overflow: hidden;
 }
 
 .carrousel {
@@ -925,7 +923,7 @@
 
 img.content {
   width: 100%;
-  height: 100%;
+  height: 100px !important;
   display: block;
 }
 

@@ -42,19 +42,21 @@ $( _ => {
 
 const Carrousel = (update) => {
 	
+	const workspace = $('<div class="carrousel-workspace"></div>');
 	const container = $('<div class="carrousel-container"></div>');
 	const carrousel = $('<div class="carrousel"></div>');
-	const images = $('<div class="images"></div>');
 
 	for(var i = 27; i < 31; i++){
 
+		let images = $('<div class="images"></div>');
 		const content = $('<img class="content" src="../assets/img/news/news-'+i+'.png">');
 		images.append(content);
+		carrousel.append(images)
 	}
 
 	const btn = $('<div class="buttons"></div>');
-	const btnLeft = $('<a href="" class="btn-left"><img src="../assets/img/flecha1.png" alt="search"></a>');
-	const btnRight = $('<a href="" class="btn-right"><img src="../assets/img/flecha2.png" alt="search"></a>');
+	const btnLeft = $('<div href="" class="btn-left"><img src="../assets/img/flecha1.png" alt="search"></div>');
+	const btnRight = $('<div href="" class="btn-right"><img src="../assets/img/flecha2.png" alt="search"></div>');
 
 	$(document).ready(function(){
 
@@ -89,10 +91,10 @@ const Carrousel = (update) => {
 
 	});
 	btn.append(btnLeft,btnRight);
-	carrousel.append(images);
 	container.append(carrousel,btn);
+	workspace.append(container);
 
-	return container
+	return workspace
 
 }
 'use strict';
