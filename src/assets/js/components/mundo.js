@@ -30,7 +30,34 @@ const Mundosection = (update) => {
 
 	const center4 = $('<div class="col s12 l12 center-large"></div>');
 	const textCenter4 = $('<div class="col l6 s12 center-large-container"><p class="col s12">'+state.news[9].title+'</p></div>');
-	const imageCenter4 = $('<div class="small-image news-9 col s12 l6"></div>')
+	const imageCenter4 = $('<div class="small-image news-9 col s12 l6"></div>');
+
+	const secondaryRow = $('<div class="row"></div>');
+	const secondary = $('<div class="secondary-mundo"></div>');
+
+	const sec1 = $('<div class="col s12 l3"></div>');
+	const sec1Text = $('<div class="small-container"><p class="col s12">'+state.news[10].title+'</p></div>');
+	const sec1Image = $('<div class="small-image news-10"></div>');
+
+	const sec2 = $('<div class="col s12 l3"></div>');
+	const sec2Text = $('<div class="small-container"><p class="col s12">'+state.news[11].title+'</p></div>');
+	const sec2Image = $('<div class="small-image news-11"></div>');
+
+	const sec3 = $('<div class="col s12 l3"></div>');
+	const sec3Text = $('<div class="small-container"><p class="col s12">'+state.news[12].title+'</p></div>');
+	const sec3Image = $('<div class="small-image news-12"></div>');
+
+	const sec4 = $('<div class="col s12 l3"></div>');
+	const sec4Text = $('<div class="small-container"><p class="col s12">'+state.news[13].title+'</p></div>');
+	const sec4Image = $('<div class="small-image news-13"></div>');
+
+	sec1.append(sec1Image, sec1Text);
+	sec2.append(sec2Image, sec2Text);
+	sec3.append(sec3Image, sec3Text);
+	sec4.append(sec4Image, sec4Text);
+
+	secondary.append(sec1,sec2,sec3,sec4);
+	secondaryRow.append(secondary);
 
 	left.append(imageLeft,textLeft);
 	center1.append(imageCenter1,textCenter1);
@@ -42,7 +69,7 @@ const Mundosection = (update) => {
 	center.append(center1,center2,center3,center4);
 	principal.append(left,center,right);
 	principalRow.append(principal);
-	container.append(principalRow);
+	container.append(principalRow, secondaryRow);
 
 	return container;
 }
